@@ -1,4 +1,4 @@
-package org.example;
+package org.tw.splitwise;
 
 import java.io.IOException;
 import java.io.InputStream;

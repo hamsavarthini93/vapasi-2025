@@ -1,4 +1,4 @@
-package org.example;
+package org.tw.splitwise;
 
 public class PropertiesNotFoundException extends Exception {
 

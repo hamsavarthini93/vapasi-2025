@@ -1,5 +1,5 @@
-import org.example.PropertiesNotFoundException;
-import org.example.SplitWiseStrategy;
+import org.tw.splitwise.PropertiesNotFoundException;
+import org.tw.splitwise.SplitWiseStrategy;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class TestSplitwiseStrategy {
         props.setProperty("expense.2.paidBy", "B");
         props.setProperty("expense.2.amount", "500");
         props.setProperty("expense.2.sharedMembers", "C,D");
-        props.setProperty("expense.3.paidBy", "D");
+        props.setProperty("expense.4.paidBy", "D");
         props.setProperty("expense.3.amount", "300");
         props.setProperty("expense.3.sharedMembers", "A,B");
         SplitWiseStrategy.runSplitter(props);
@@ -51,7 +51,7 @@ public class TestSplitwiseStrategy {
         props.setProperty("expense.1.sharedMembers", "A,B,C,D");
         props.setProperty("expense.2.paidBy", "B");
         props.setProperty("expense.2.sharedMembers", "C,D");
-        props.setProperty("expense.3.paidBy", "D");
+        props.setProperty("expense.4.paidBy", "D");
         props.setProperty("expense.3.sharedMembers", "A,B");
         assertEquals("Required properties are not found in the file", SplitWiseStrategy.runSplitter(props));
     }
@@ -63,7 +63,7 @@ public class TestSplitwiseStrategy {
         props.setProperty("expense.1.amount", "100");
         props.setProperty("expense.2.paidBy", "B");
         props.setProperty("expense.2.amount", "500");
-        props.setProperty("expense.3.paidBy", "D");
+        props.setProperty("expense.4.paidBy", "D");
         props.setProperty("expense.3.amount", "300");
         assertEquals("Required properties are not found in the file", SplitWiseStrategy.runSplitter(props));
     }
